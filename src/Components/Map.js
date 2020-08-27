@@ -67,7 +67,7 @@ export class MapContainer extends React.Component {
       <div style={{ height: '100vh', width: '100%' }}>
         <Map
           google={this.props.google}
-          zoom={18}
+          zoom={19}
           initialCenter={center}
           mapTypeControl
           mapTypeControlOptions={{ mapTypeIds: ['satellite', 'terrain'] }}
@@ -84,7 +84,7 @@ export class MapContainer extends React.Component {
                   fillOpacity: 0.4,
                   strokeColor: "#000",
                   strokeOpacity: idx / 10,
-                  strokeWeight: 1
+                  strokeWeight: 1.5
                 }}
               />
             )
@@ -96,6 +96,6 @@ export class MapContainer extends React.Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: ('AIzaSyA0l-Lse4M2naNhibYENpiwQ8drvkYzadY'),
+  apiKey: ('<My Google Api Key>'),
   libraries: ['visualization']
 })(MapContainer)
